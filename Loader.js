@@ -125,7 +125,7 @@
         alert(answer.replace(/\*/g, ""));
     }
 
-     const Default_Username = document.querySelector("app-username").textContent;
+     const True_Username = document.querySelector("app-username").textContent;
 
     document.addEventListener('keydown', async function (event) {
         if (event.ctrlKey && event.key === 'x') {
@@ -147,7 +147,7 @@
             event.preventDefault();
             try {
                 let Username = prompt("Username?")
-                //document.querySelector("app-username").textContent = prompt("Username?", Default_Username)
+                //document.querySelector("app-username").textContent = prompt("Username?", True_Username)
                 document.querySelector("app-username").textContent = Username
                 document.querySelector(".leaderShout").textContent = Username.split(" ")[0] + "!"
             } catch (error) {
