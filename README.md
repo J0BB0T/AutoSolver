@@ -1,15 +1,15 @@
-# Bedrock-AutoSolver
+# Bedrock-AutoSolver<br />
 
-Features:
-Solves Bedrock Questions Automatically,
+Features:<br />
+Solves Bedrock Questions Automatically,<br />
 Changes Username Automatically.
 
-Installation:
-Download A Userscript Plugin Like TamperMonkey.
-Copy The Loader.js File.\n
-Create A New Userscript
-Paste In The Loader.js File.
+Installation:<br />
+Download A Userscript Plugin Like TamperMonkey.<br />
+Copy The Loader.js File.<br />
+Create A New Userscript.<br />
+Paste In The Loader.js File.<br />
 
-Usage:
-CTRL + X To Answer Question
+Usage:<br />
+CTRL + X To Answer Question<br />
 CTRL + Z To Change Username
