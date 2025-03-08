@@ -6,7 +6,7 @@ Changes Username Automatically.
 
 Installation:
 Download A Userscript Plugin Like TamperMonkey.
-Copy The Loader.js File.
+Copy The Loader.js File.\n
 Create A New Userscript
 Paste In The Loader.js File.
 
