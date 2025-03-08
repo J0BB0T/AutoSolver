@@ -21,7 +21,7 @@
     const GEMINI_API_KEY_KEY = 'KEY'; // Replace With Gemini API Key (https://aistudio.google.com/app/apikey)
     let Answer_Result = ""
     let geminiApiKey = GM_getValue(GEMINI_API_KEY_KEY, null);
-    const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=';
+    const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=';
     const DEFAULT_PROMPT = "Analyze the image and identify any questions. Answer the questions with as much detail as possible. Show your reasoning. Do NOT explain anything in the answer, just give the answer itself but use punctuation and start the answer with a capital letter. Also do NOT use - in your answer. Seperate the answer to the rest of the message like this: Answer: [Answer Here] [New Line] ---------- [New Line] Reason: [Reason Here]";
     const ADDITIONAL_PROMPT_MESSAGE = "Enter any additional instructions or questions to send with the image (or leave blank for default prompt):";
 
