@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Bedrock Learning Autosolver
+// @name         Bedrock Learning AutoSolver
 // @namespace    http://tampermonkey.net/
 // @version      1.3
 // @description  Takes a screenshot of Bedrock Learning, sends it to Gemini, and displays the answer in a beautifully styled new tab.
