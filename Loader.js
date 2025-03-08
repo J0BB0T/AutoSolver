@@ -150,9 +150,7 @@
                 //document.querySelector("app-username").textContent = prompt("Username?", True_Username)
                 document.querySelector("app-username").textContent = Username
                 document.querySelector(".leaderShout").textContent = Username.split(" ")[0] + "!"
-            } catch (error) {
-                alert("Error: " + error);
-            }
+            } catch (error) {}
         }
     });
     document.querySelector("app-username").textContent = Default_Username;
