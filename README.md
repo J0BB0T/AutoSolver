@@ -12,4 +12,5 @@ Paste In The Loader.js File.<br />
 
 Usage:<br />
 CTRL + X To Answer Question<br />
-CTRL + Z To Change Username
+CTRL + Z To Change Username<br />
+CTRL + C To Copy Answer
