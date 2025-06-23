@@ -10,19 +10,19 @@
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @license      MIT
-// @downloadURL https://raw.githubusercontent.com/J0BB0T/Bedrock-AutoSolver/refs/heads/main/Loader.js
-// @updateURL https://raw.githubusercontent.com/J0BB0T/Bedrock-AutoSolver/refs/heads/main/Loader.js
+// @downloadURL https://raw.githubusercontent.com/J0BB0T/AutoSolver/refs/heads/main/BRLoader.js
+// @updateURL https://raw.githubusercontent.com/J0BB0T/AutoSolver/refs/heads/main/BRLoader.js
 // ==/UserScript==
 
 (function () {
     'use strict';
 
     const Default_Username = "Osama Bin Laden" // Replace With Your Username You Would Like To Be Shown
-    const GEMINI_API_KEY_KEY = 'KEY'; // Replace With Gemini API Key (https://aistudio.google.com/app/apikey)
+    const GEMINI_API_KEY_KEY = 'AIzaSyAHasi3QQCRB886v5cc14a06Z8ak4KZ5jE'; // Replace With Gemini API Key (https://aistudio.google.com/app/apikey)
     let Answer_Result = ""
     let geminiApiKey = GM_getValue(GEMINI_API_KEY_KEY, null);
-    const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=';
-    const DEFAULT_PROMPT = "Analyze the image and identify any questions. Answer the questions with as much detail as possible. Show your reasoning. Do NOT explain anything in the answer, just give the answer itself but use punctuation and start the answer with a capital letter. Also do NOT use - in your answer. Seperate the answer to the rest of the message like this: Answer: [Answer Here] [New Line] ---------- [New Line] Reason: [Reason Here]";
+    const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=';
+    const DEFAULT_PROMPT = "Analyze the image and identify any questions. Read the question and give an answer. Only have an answer and a reason, no 'Ok, I will analyze the image' or anything similar. Do NOT explain anything in the answer, just give the answer itself but use punctuation and start the answer with a capital letter. Also do NOT use - in your answer. Seperate the answer to the rest of the message like this: Answer: [Answer Here] [New Line] ---------- [New Line] Reason: [Reason Here]";
     const ADDITIONAL_PROMPT_MESSAGE = "Enter any additional instructions or questions to send with the image (or leave blank for default prompt):";
 
     async function checkApiKey() {
@@ -38,6 +38,15 @@
         }
         return true;
     }
+   async function simulateTyping(textarea, text) {
+       textarea.focus();
+       text.split('').forEach((char, i) => {
+           setTimeout(() => {
+               textarea.value += char;
+               textarea.dispatchEvent(new Event('input', { bubbles: true }));
+           }, i);
+       });
+   }
 
     async function captureScreenshot() {
         if (typeof html2canvas === "undefined") {
@@ -161,6 +170,15 @@
             } catch (error) {
             console.log(error);
             }
+        } else if (event.ctrlKey && event.key === 'v') {
+            event.preventDefault();
+            try {
+                simulateTyping( document.querySelector('textarea'), Answer_Result.split("-")[0].replace("Answer:", ""));
+                alert("Completed");
+
+            } catch (error) {
+            console.log(error);
+            }
         }
     });
     document.querySelector("app-username").textContent = Default_Username;
@@ -168,5 +186,5 @@
         document.querySelector(".leaderShout").textContent = Default_Username.split(" ")[0] + "!";
     } catch (error) {}
     console.log("Bedrock AutoSolver Loaded!");
-    alert("AutoSolver Loaded.\nPress CTRL + X To Answer, CTRL + Z To Change Name, CTRL + C To Copy Answer");
+    alert("AutoSolver Loaded.\nPress CTRL + X To Answer, CTRL + Z To Change Name, CTRL + C To Copy Answer, CTRL + V To Paste Answer (If Possible)");
 })();
