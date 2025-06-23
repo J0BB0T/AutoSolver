@@ -6,7 +6,7 @@ Changes Username Automatically.
 
 Installation:<br />
 Download A Userscript Plugin Like TamperMonkey.<br />
-Copy The Loader.js File.<br />
+Copy The BRLoader.js File.<br />
 Create A New Userscript.<br />
 Paste In The Loader.js File.<br />
 
@@ -24,6 +24,6 @@ Skips Video.
 
 Installation:<br />
 Download A Userscript Plugin Like TamperMonkey.<br />
-Copy The Loader.js File.<br />
+Copy The KSLoader.js File.<br />
 Create A New Userscript.<br />
 Paste In The Loader.js File.<br />
