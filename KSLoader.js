@@ -71,7 +71,7 @@
     submitAnswerWrapper(questionId, 2, 'e');
     setTimeout(() => {
       submitAnswerWrapper(questionId, 2, 'e');
-    }, 800);
+    }, 1);
   }
 
   async function answerQuestion(qElement) {
