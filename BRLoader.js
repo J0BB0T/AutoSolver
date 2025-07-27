@@ -18,7 +18,7 @@
     'use strict';
 
     const Default_Username = "Osama Bin Laden" // Replace With Your Username You Would Like To Be Shown
-    const GEMINI_API_KEY_KEY = 'AIzaSyAHasi3QQCRB886v5cc14a06Z8ak4KZ5jE'; // Replace With Gemini API Key (https://aistudio.google.com/app/apikey)
+    const GEMINI_API_KEY_KEY = 'EG_AIzaSyAHasi3QQCRB886v5cc14a06Z8ak4KZ5jE'; // Replace With Gemini API Key (https://aistudio.google.com/app/apikey)
     let Answer_Result = ""
     let geminiApiKey = GM_getValue(GEMINI_API_KEY_KEY, null);
     const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=';
